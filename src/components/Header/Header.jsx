@@ -18,7 +18,7 @@ const Header = () => {
         <p className="bg-red-500 text-white font-bold py-1 px-4">Latest</p>
         <Marquee pauseOnHover={true} className="">
           {latestNews.map((news) => (
-            <Link to={`/details/${news._id}`} className="mr-4">**{news.title}**</Link>
+            <Link to={`/details/${news._id}`} key={news._id} className="mr-4">**{news.title}**</Link>
           ))}
         </Marquee>
       </div>
